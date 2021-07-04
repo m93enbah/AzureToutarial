@@ -1,0 +1,20 @@
+<html>
+<head>
+<title> Calling the API</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+$.ajax({
+    url: "https://web-api-service.azurewebsites.net/api/Course",
+type: "Get",
+success: function(result) {
+console.log(result);
+},
+error: function(error){
+console.log(error);
+}})})
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,6 @@
+
+az appservice plan create --name "demoappplan2020" --resource-group "azuredemo" --sku Free
+
+az webapp create --name "demoapp2050" --resource-group "azuredemo" --plan "demoappplan2020"
+
+az webapp deployment source config --name "demoapp2050" --resource-group "azuredemo" --repo-url "https://github.com/alashro/WebAppNew" --branch master --manual-integration

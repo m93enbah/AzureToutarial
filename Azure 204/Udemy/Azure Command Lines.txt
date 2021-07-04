@@ -1,0 +1,72 @@
+1-create resource group with azure VM 
+
+//to apply azure login to the azure resource
+Az login
+//to create resource gropu on location east us
+Az group create --name vm-grp --location eastus
+//to create Azure VM on resource group vm-grp with set username called azureuser
+Az vm create --resource-group vm-grp –-name demovm –-image win2019datacenter -–admin-username azureuser
+//it will ask for the password
+password:Mohammed1993
+===================================================================================================
+2-create resource group with service plan with web app service
+
+$plan="enbehPlan"
+$appname="enbehAppName"
+$repourl=”https://github.com/m93enbah/SampleWebApp"
+$groupName=”DefaultResourceGroup-WEU”
+
+//it will create resource group under region west europe
+az group create --location westeurope --name $ groupName
+
+//it will create service plan under resource group
+az appservice plan create --name $plan --resource-group $groupName --sku B1
+
+//it will create web app under the service plan
+az webapp create --name $appname --resource-group $groupName --plan $plan 
+
+//it will apply deployment of Git repository on the web app service 
+az webapp deployment source config --name $appname --resource-group $groupName   --repo-url $repourl --branch master --manual-integration
+=====================================================================================================
+3-create CORS policy on Azure App Service
+az webapp cors add -g new-grp -n sourceapi1000 --allowed-origins https://consumewebapp1000.azurewebsites.net
+=====================================================================================================
+4-create resource group with service plan with web app service
+
+$plan="enbehPlan"
+$appname="enbehAppName"
+$repourl=”https://github.com/m93enbah/SampleWebApp"
+$groupName=”DefaultResourceGroup-WEU”
+
+//it will create resource group under region west europe
+az group create --location westeurope --name $ groupName
+
+//it will create service plan under resource group
+az appservice plan create --name $plan --resource-group $groupName --sku B1
+
+//it will create web app under the service plan
+az webapp create --name $appname --resource-group $groupName --plan $plan 
+
+//it will apply Git repository on the web app service 
+az webapp deployment source config --name $appname --resource-group $groupName   --repo-url $repourl --branch master --manual-integration
+
+//it will apply deployment slot on the Azure App Service
+az webapp deployment slot create --name $appname --resource-group $groupName --slot staging
+=======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

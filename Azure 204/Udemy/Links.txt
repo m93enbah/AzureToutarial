@@ -1,0 +1,6 @@
+Links:-
+
+1-Azure Services Regions Search
+https://azure.microsoft.com/en-us/global-infrastructure/services/?products=azure-sql-database
+
+2-
