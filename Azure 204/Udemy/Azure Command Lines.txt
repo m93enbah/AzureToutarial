@@ -2,12 +2,18 @@
 
 //to apply azure login to the azure resource
 Az login
+
 //to create resource gropu on location east us
 Az group create --name vm-grp --location eastus
+
 //to create Azure VM on resource group vm-grp with set username called azureuser
 Az vm create --resource-group vm-grp –-name demovm –-image win2019datacenter -–admin-username azureuser
+
 //it will ask for the password
 password:Mohammed1993
+
+//get list of resource groups
+Az group list
 ===================================================================================================
 2-create resource group with service plan with web app service
 
