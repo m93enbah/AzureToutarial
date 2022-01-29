@@ -1,3 +1,4 @@
 RDP  --> Port 3389
 SSH  --> Port 22
 HTTP --> Port 80
+TCP  --> Port 8172
