@@ -2,6 +2,7 @@
 
 //to create new resource group on location east us
 New-AzResourceGroup -Name new-vm-grp -Location EastUS
+
 //to create virtual machine under the resoruce gropu with set security gropu and open two port 80,3389
 New-AzVm -ResourceGroupName "new-vm-grp" -Name "demovm1" -Location "East US" -VirtualNetworkName "demo-network" 
 -SubnetName "subnetA" -SecurityGroupName "myNSG" -PublicIpAddressName "new-ip" -OpenPorts 80,3389
@@ -23,3 +24,38 @@ New-AzWebApp -Name $webappname -Location $location -ResourceGroupName $resourceg
 // Next, we issue the command to create a new Web App deployment slot
 New-AzWebAppSlot -Name $webappname -ResourceGroupName $resourcegrp -Slot "staging"
 ===================================================================================================
+//Create azure app service Linux 
+
+$location="West Europe"
+$resourcegrp="DefaultResourceGroup-WEU"
+$webappname="demoApp"
+
+we issue the command to create a new App Service Plan
+New-AzAppServicePlan -Name $webappname -Location $location -ResourceGroupName $resourcegrp -Tier Standard -is-linux
+
+// Next, we issue the command to create a new Web App with App Service Plan
+New-AzWebApp -Name $webappname -Location $location -ResourceGroupName $resourcegrp -AppServicePlan $webappname
+
+// Next, we issue the command to create a new Web App deployment slot
+New-AzWebAppSlot -Name $webappname -ResourceGroupName $resourcegrp -Slot "staging"
+===================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
