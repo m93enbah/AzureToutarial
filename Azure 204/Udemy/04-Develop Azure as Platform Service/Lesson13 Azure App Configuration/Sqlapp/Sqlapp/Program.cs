@@ -16,7 +16,7 @@ namespace Sqlapp
                 .ConfigureWebHostDefaults(webBuilder =>
                 webBuilder.ConfigureAppConfiguration(config => {
                     var settings = config.Build();
-                    config.AddAzureAppConfiguration("Endpoint=https://enbehconfig.azconfig.io;Id=RQqB-l9-s0:kx+/Am4URhLDhZbVZ81a;Secret=1OEbqNa7h8ftoNtK1Yz84hMYRt9digJTAZ4JVJTCsoA=");
+                    config.AddAzureAppConfiguration("Endpoint=https://enbehappconfig.azconfig.io;Id=V8yt-l9-s0:f9OiHcz11rHrsNfKgNm0;Secret=0EDZBj8xxOh4ktqM+rrrU4EBHt+iDNqeSDseNanLMr8=");
                 }).UseStartup<Startup>());
     }
 }

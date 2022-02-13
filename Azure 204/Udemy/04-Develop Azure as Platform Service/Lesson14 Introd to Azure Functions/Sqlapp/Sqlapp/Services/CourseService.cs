@@ -21,7 +21,7 @@ namespace Sqlapp.Services
 
         public async Task<IEnumerable<Course>> GetCourses()
         {
-            var functionUrl = "https://enbehfunc.azurewebsites.net/api/HttpGetFunc?code=gp6AIilx3TjOFkT848LH4CJb0JNrZzu0SV4J0CERCB0cv2T8bbmQnw==";
+            var functionUrl = "https://enbehfunc.azurewebsites.net/api/GetCourses?code=iCN5dX5Cl/70HkhhK8/jf30Uob1VaLR665xalriM4sZr89OoAejDsQ==";
             using (HttpClient _client = new HttpClient()) 
             {
                 HttpResponseMessage _response = await _client.GetAsync(functionUrl);
