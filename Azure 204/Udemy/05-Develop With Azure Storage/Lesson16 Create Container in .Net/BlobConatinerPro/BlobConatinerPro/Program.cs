@@ -24,7 +24,7 @@ namespace BlobConatinerPro
             var serviceClient = new BlobServiceClient(connectionString);
             var containerClient = serviceClient.GetBlobContainerClient(containerName);
 
-            UploadBlob(containerClient);
+            //UploadBlob(containerClient);
 
             //ListContiners(serviceClient);
 
@@ -33,7 +33,14 @@ namespace BlobConatinerPro
             //DownloadBlob(containerClient);
 
 
-            ReadBlob(containerClient);
+            //ReadBlob(containerClient);
+
+
+            GetProperities(containerClient);
+
+            SetMetaData(containerClient);
+
+            GetMetaData(containerClient);
 
             Console.ReadLine();
         }
@@ -94,5 +101,40 @@ namespace BlobConatinerPro
             builder.ExpiresOn = DateTimeOffset.UtcNow.AddHours(1);
             return blobClient.GenerateSasUri(builder);
         }
+
+
+
+        public static void GetProperities(BlobContainerClient containerClient) 
+        {
+            var blobClient = containerClient.GetBlobClient(blobName);
+            var props = blobClient.GetProperties();
+            Console.WriteLine($"Access Tier : ${props.Value.AccessTier}");
+            Console.WriteLine($"Size of Blob : ${props.Value.ContentLength}");
+        }
+
+
+        public static void GetMetaData(BlobContainerClient containerClient) 
+        {
+            var blobClient = containerClient.GetBlobClient(blobName);
+            var props = blobClient.GetProperties();
+            var metaDatas = props.Value.Metadata;
+            foreach (var metaData in metaDatas) 
+            {
+                Console.WriteLine($"Key {metaData.Key} : Value {metaData.Value} \n");
+            }
+        }
+
+
+        public static void SetMetaData(BlobContainerClient containerClient)
+        {
+            var blobClient = containerClient.GetBlobClient(blobName);
+            var props = blobClient.GetProperties();
+            var metaDatas = props.Value.Metadata;
+            metaDatas.Add("isam", "2");
+
+            blobClient.SetMetadata(metaDatas);
+            Console.WriteLine("MetaData Appended");
+        }
+
     }
 }
