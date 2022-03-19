@@ -11,10 +11,10 @@ namespace sasprogram
     class Program
     {
         //define the storage account Name and account key and container name and blob name
-        static string accountname = "enbehbatchaccount";
-        static string accountkey = "wxFj8csDwpe0i7wy09zMrksOFJCJeEhTCJmMmnTWhvfCkINgG7/vewf1t6ZbRUhxy/p4qWHeUXzH9W1sMnjiFA==";
+        static string accountname = "sampleaccountname";
+        static string accountkey = "qTC2MLYxRZkSyrXcJWmxjeslx+JV3NRUA0HP2MGwTjc05REE0D/FchxGRZH1NXaxDszS+cxvxoDk4VGhFMKSfw==";
         static string containerName = "samplecontainer";
-        static string blobname = "sample.txt";
+        static string blobname = "newsample.txt";
 
         static async Task Main(string[] args)
         {

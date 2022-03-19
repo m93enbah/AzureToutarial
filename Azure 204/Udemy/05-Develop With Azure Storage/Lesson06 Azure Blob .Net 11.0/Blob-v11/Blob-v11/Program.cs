@@ -8,10 +8,10 @@ namespace Blob_v11
 {
     class Program
     {
-        static string _conenction_string = "DefaultEndpointsProtocol=https;AccountName=enbehstorage;AccountKey=pgSgc8psXmSTgwdIE+fsozrDkirh1YfbKcJWgn9fKRAdo54Dq4ugJ7PPENrK1sFrsAMZY7C3z8dq1U+hAZM9wA==;EndpointSuffix=core.windows.net";
+        static string _conenction_string = "DefaultEndpointsProtocol=https;AccountName=sampleaccountname;AccountKey=qTC2MLYxRZkSyrXcJWmxjeslx+JV3NRUA0HP2MGwTjc05REE0D/FchxGRZH1NXaxDszS+cxvxoDk4VGhFMKSfw==;EndpointSuffix=core.windows.net";
         static string _container_name = "datav11";
         static string _filename = "sample.txt";
-        static string _filelocation = "C:\\Work\\sample.txt";
+        static string _filelocation = "C:\\Users\\M.Enbeh.ext\\Desktop\\downloadSample.png";
         static void Main(string[] args)
         {
             CreateContainer().Wait();

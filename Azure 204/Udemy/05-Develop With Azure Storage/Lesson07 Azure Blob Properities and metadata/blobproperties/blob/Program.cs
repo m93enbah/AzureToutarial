@@ -9,9 +9,9 @@ namespace blobproperties
 {
     class Program
     {
-        static string connstring = "DefaultEndpointsProtocol=https;AccountName=enbehstorage;AccountKey=pgSgc8psXmSTgwdIE+fsozrDkirh1YfbKcJWgn9fKRAdo54Dq4ugJ7PPENrK1sFrsAMZY7C3z8dq1U+hAZM9wA==;EndpointSuffix=core.windows.net";
-        static string containerName = "data";
-        static string filename = "sample.txt";
+        static string connstring = "DefaultEndpointsProtocol=https;AccountName=sampleaccountname;AccountKey=qTC2MLYxRZkSyrXcJWmxjeslx+JV3NRUA0HP2MGwTjc05REE0D/FchxGRZH1NXaxDszS+cxvxoDk4VGhFMKSfw==;EndpointSuffix=core.windows.net";
+        static string containerName = "samplecontainer";
+        static string filename = "newsample.txt";
         static async Task Main(string[] args)
         {
             GetProperties();

@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 
 namespace blobprogram
 {
+    //we using Azure Storage Blob Nuget package
     class Program
     {
-        static string storageconnstring = "DefaultEndpointsProtocol=https;AccountName=enbehstorage;AccountKey=pgSgc8psXmSTgwdIE+fsozrDkirh1YfbKcJWgn9fKRAdo54Dq4ugJ7PPENrK1sFrsAMZY7C3z8dq1U+hAZM9wA==;EndpointSuffix=core.windows.net";
-        static string containerName = "data";
+        static string storageconnstring = "DefaultEndpointsProtocol=https;AccountName=sampleaccountname;AccountKey=qTC2MLYxRZkSyrXcJWmxjeslx+JV3NRUA0HP2MGwTjc05REE0D/FchxGRZH1NXaxDszS+cxvxoDk4VGhFMKSfw==;EndpointSuffix=core.windows.net";
+        static string containerName = "samplecontainertest";
         static string filename = "sample.txt";
-        static string filepath= @"C:\Users\m.enbeh\Desktop\Azure\Azure 204\Udemy\Section05 Develope With Azure Storage\Lesson05 Azure Blob .Net 12.0\sample.txt";
+        static string filepath= @"C:\Users\M.Enbeh.ext\Desktop\downloadSample.png";
         static string downloadpath = "C:\\Work\\sample.txt";
         static async Task Main(string[] args)
         {
-            //Container().Wait();
-            //CreateBlob().Wait();
-            //GetBlobs().Wait();
-            GetBlob().Wait();
+            Container().Wait();
+            CreateBlob().Wait();
+            GetBlobs().Wait();
+            //GetBlob().Wait();
             Console.WriteLine("Complete");
             Console.ReadKey();
         }
